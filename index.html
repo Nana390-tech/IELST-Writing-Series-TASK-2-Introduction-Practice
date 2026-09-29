@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IELTS Writing Task 2: Introduction Builder</title>
+<style>
+:root{--p:#5f2a86;--pd:#411a60;--a:#f5c518;--ai:#2e2400;--bg:#f7f3fb;--soft:#ebe0f6;
+ --c1:#5f2a86;--c2:#a97400;--c3:#a3246b;--c4:#3b4a9f;--ok:#1f8a4c;--bad:#cc3322}
+*{box-sizing:border-box}
+html{font-size:19px}
+body{margin:0;background:var(--bg);color:#1d2430;font-family:"Segoe UI","Helvetica Neue",Arial,sans-serif;line-height:1.6}
+button,input,textarea,select{font:inherit}
+button{cursor:pointer}
+:focus-visible{outline:3px solid var(--a);outline-offset:2px}
+.ar{direction:rtl;text-align:right;font-family:Tahoma,"Segoe UI","Noto Naskh Arabic",Arial,sans-serif;color:#5b6474;font-size:.95rem;margin:.2rem 0 .6rem}
+.small{font-size:.85rem;color:#5b6474}
+.top{position:sticky;top:0;z-index:20;background:var(--pd);color:#fff;display:flex;flex-wrap:wrap;gap:.5rem 1rem;align-items:center;justify-content:space-between;padding:.6rem 1.1rem}
+.brand{display:flex;flex-direction:column;line-height:1.25}
+.series{font-size:.78rem;opacity:.82}
+.ltitle{font-size:1.1rem;font-weight:700}
+.tools{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.pill{background:var(--a);color:var(--ai);font-weight:700;border-radius:999px;padding:.15rem .8rem;font-size:.85rem;white-space:nowrap}
+.pill.ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.5)}
+.tbtn{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.5);border-radius:8px;padding:.1rem .65rem;font-size:.82rem}
+.tbtn:hover{background:rgba(255,255,255,.13)}
+#rail{display:flex;gap:.35rem;overflow-x:auto;padding:.7rem 1.1rem;background:#fff;border-bottom:1px solid #e3dcee}
+.rs{flex:1 0 auto;min-width:112px;display:flex;align-items:center;gap:.45rem;border:2px solid #e6def0;background:#fff;border-radius:10px;padding:.3rem .55rem;text-align:left;color:#1d2430}
+.rs .n{flex:none;width:1.7rem;height:1.7rem;border-radius:50%;display:grid;place-items:center;background:#f2ecf8;font-weight:700;font-size:.82rem}
+.rs .t{display:flex;flex-direction:column;line-height:1.15;font-size:.84rem;font-weight:600}
+.rs .t small{font-weight:400;color:#6b7383;font-family:Tahoma,Arial,sans-serif}
+.rs.on{border-color:var(--p);background:var(--soft)}
+.rs.on .n{background:var(--p);color:#fff}
+.rs.ok .n{background:var(--a);color:var(--ai)}
+main{max-width:920px;margin:0 auto;padding:1.3rem 1rem 2rem}
+footer{text-align:center;color:#6b7383;font-size:.85rem;padding:1.2rem 1rem 2rem}
+.card{background:#fff;border:1px solid #e3dcee;border-radius:14px;padding:1.1rem 1.3rem;margin-bottom:1rem}
+.card h2{margin:0 0 .4rem;font-size:1.45rem;color:var(--pd)}
+h3{color:var(--pd);font-size:1.15rem;margin:1.1rem 0 .5rem}
+.hero{display:grid;grid-template-columns:auto 1fr;gap:0 1.3rem;align-items:start;margin:.3rem 0 1.2rem}
+.hero .mark{font-size:3.2rem;line-height:1}
+.hero h1{margin:.1rem 0 .3rem;font-size:1.9rem;color:var(--pd);line-height:1.2}
+.hero p{margin:0}
+.btn{background:var(--p);color:#fff;border:0;border-radius:10px;padding:.55rem 1.2rem;font-weight:700}
+.btn:hover{background:var(--pd)}
+.btn.ghost{background:#fff;color:var(--pd);border:2px solid var(--p)}
+.btn.ghost:hover{background:var(--soft)}
+.btn.go{background:var(--a);color:var(--ai)}
+.btn.go:hover{background:#e2b40c}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.row{display:flex;gap:.7rem;align-items:center;flex-wrap:wrap;margin-top:.8rem}
+.navrow{display:flex;justify-content:space-between;gap:1rem;margin-top:1.3rem}
+/* moves */
+.moves{display:grid;gap:.6rem;margin-top:.6rem}
+.move{border-left:7px solid var(--c1);background:#fff;border-radius:0 12px 12px 0;padding:.6rem .9rem;border-top:1px solid #e3dcee;border-right:1px solid #e3dcee;border-bottom:1px solid #e3dcee}
+.move.m2{border-left-color:var(--c2)}.move.m3{border-left-color:var(--c3)}.move.m4{border-left-color:var(--c4)}
+.move .lab{font-weight:800;color:var(--pd);font-size:.9rem}
+.move.m2 .lab{color:var(--c2)}.move.m3 .lab{color:var(--c3)}.move.m4 .lab{color:var(--c4)}
+.move .frames{font-size:.9rem;color:#3f4854;margin-top:.25rem}
+.move .frames b{font-weight:600}
+.demo{display:grid;gap:.5rem;margin:.6rem 0}
+.dline{display:grid;grid-template-columns:auto 1fr;gap:.8rem;align-items:start}
+.chipn{width:1.9rem;height:1.9rem;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:800;font-size:.85rem;background:var(--c1)}
+.chipn.m2{background:var(--c2)}.chipn.m3{background:var(--c3)}.chipn.m4{background:var(--c4)}
+.dline .txt{background:#fff;border:1px solid #e3dcee;border-radius:10px;padding:.45rem .8rem}
+.dline .note{font-size:.85rem;color:#5b6474;margin-top:.2rem}
+.qbox{background:var(--soft);border:2px solid var(--p);border-radius:12px;padding:.75rem 1rem;margin:.6rem 0}
+.qbox .h{font-weight:800;color:var(--pd);margin-bottom:.2rem;font-size:.9rem}
+.qbox p{margin:.2rem 0}
+/* items */
+.item{display:grid;grid-template-columns:2.2rem 1fr;gap:.8rem;background:#fff;border:1px solid #e3dcee;border-radius:14px;padding:1rem 1.2rem;margin-bottom:.9rem}
+.item.done{border-color:var(--p)}
+.qnum{width:2.2rem;height:2.2rem;border-radius:50%;background:var(--soft);color:var(--pd);font-weight:800;display:grid;place-items:center}
+.item.done .qnum{background:var(--p);color:#fff}
+.q{margin:.1rem 0 .6rem;font-size:1.02rem;font-weight:600}
+.opts{display:grid;gap:.5rem}
+.opt{text-align:left;background:#fff;border:2px solid #ddd4ea;border-radius:10px;padding:.5rem .8rem;color:#1d2430}
+.opt:hover:not([disabled]){border-color:var(--p);background:var(--soft)}
+.opt.right{border-color:var(--ok);background:#e9f7ee;font-weight:700}
+.opt.wrong{border-color:var(--bad);background:#fdeae7;text-decoration:line-through;color:#8a3b3b}
+.fb{margin-top:.7rem;border-radius:10px;padding:.55rem .8rem;font-size:.94rem}
+.fb.ok{background:#e9f7ee;border-left:5px solid var(--ok)}
+.fb.no{background:#fdeae7;border-left:5px solid var(--bad)}
+.hint{font-size:.85rem;color:#5b6474;margin:-.3rem 0 .5rem}
+.bank{display:flex;flex-wrap:wrap;gap:.5rem;min-height:2.4rem;margin-bottom:.7rem}
+.tile{background:#fff;border:2px solid var(--p);color:var(--pd);border-radius:9px;padding:.35rem .7rem;font-weight:600;text-align:left;max-width:100%}
+.tile.sel{background:var(--p);color:#fff}
+.buckets{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.6rem}
+.bucket{border:2px dashed var(--p);border-radius:12px;padding:.55rem;background:var(--soft);text-align:left;min-height:5rem;color:#1d2430;display:flex;flex-direction:column;gap:.3rem}
+.bucket>b{color:var(--pd);font-size:.9rem}
+.bucket .placed{background:#fff;border-radius:7px;padding:.2rem .5rem;font-size:.85rem;border-left:4px solid var(--a)}
+.bucket.flashbad{border-color:var(--bad);background:#fdeae7}
+.line{min-height:3rem;border:2px dashed var(--p);border-radius:10px;padding:.45rem;display:grid;gap:.4rem;margin-bottom:.6rem;background:var(--soft)}
+.line:empty::before{content:"Tap the sentences below in the right order";color:#6b7383;font-size:.9rem}
+/* writing */
+.modebar{display:flex;gap:.5rem;flex-wrap:wrap;margin:.5rem 0}
+.mbtn{border-radius:999px;border:2px solid var(--p);background:#fff;color:var(--pd);padding:.15rem .9rem;font-size:.88rem;font-weight:700}
+.mbtn.on{background:var(--p);color:#fff}
+.boxes{display:grid;gap:.7rem;margin-top:.6rem}
+.box{border:2px solid #ddd4ea;border-radius:12px;padding:.55rem .8rem;background:#fff;border-left-width:7px;border-left-color:var(--c1)}
+.box.b2{border-left-color:var(--c2)}.box.b3{border-left-color:var(--c3)}.box.b4{border-left-color:var(--c4)}
+.box.good{border-color:var(--ok);border-left-color:var(--ok);background:#f4fbf6}
+.box .lab{display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:.88rem;color:var(--pd);gap:.5rem}
+.box .state{font-size:.85rem;font-weight:700}
+.box .state.ok{color:var(--ok)}.box .state.no{color:#8a6d3b}
+.box textarea{width:100%;border:0;border-top:1px solid #e6ecec;margin-top:.35rem;padding:.4rem 0 0;font-size:1rem;line-height:1.6;resize:vertical;min-height:3.4rem;background:transparent}
+.box textarea:focus{outline:none}
+.box .tip{font-size:.82rem;color:#6b7383;margin-top:.25rem}
+#free{width:100%;min-height:9rem;border:2px solid #d3c8e4;border-radius:12px;padding:.7rem;font-size:1.02rem;line-height:1.7}
+.preview{background:#fffcf0;border:2px solid var(--a);border-radius:12px;padding:.7rem 1rem;margin-top:.7rem;line-height:1.8}
+.report{display:grid;gap:.45rem;margin-top:.7rem}
+.chk{display:grid;grid-template-columns:1.8rem 1fr;gap:.6rem;border:1px solid #e3dcee;border-radius:10px;padding:.45rem .7rem;background:#fff;font-size:.95rem}
+.chk.pass{border-color:var(--ok);background:#f3fbf6}
+.chk.fail{border-color:var(--bad);background:#fdf4f3}
+.chk .ic{text-align:center;font-weight:800}
+.goal{display:flex;gap:.5rem;flex-wrap:wrap;margin:.6rem 0}
+.dot{width:2.1rem;height:2.1rem;border-radius:50%;display:grid;place-items:center;border:2px dashed #b9c6c6;color:#8a9595;font-weight:800}
+.dot.on{background:var(--a);border:2px solid var(--a);color:var(--ai)}
+.saved{border:1px solid #e3dcee;border-radius:12px;padding:.6rem .9rem;margin-bottom:.6rem;background:#fff}
+.saved .h{display:flex;justify-content:space-between;gap:.6rem;font-size:.85rem;color:#5b6474}
+.saved .score{font-weight:800;color:var(--pd)}
+.bigscore{display:flex;align-items:baseline;gap:1rem;margin:.4rem 0 .8rem}
+.bigscore span{font-size:3.2rem;font-weight:800;color:var(--pd);line-height:1}
+#cert{position:fixed;inset:0;background:rgba(30,12,45,.6);z-index:50;display:grid;place-items:center;padding:1rem}
+#cert[hidden]{display:none}
+.cert-card{background:#fff;max-width:740px;width:100%;border:10px solid var(--p);outline:3px solid var(--a);outline-offset:-22px;border-radius:6px;padding:2.2rem 2rem;text-align:center}
+.cert-card h2{font-size:2.1rem;margin:.2rem 0;color:var(--pd)}
+.cert-card .who{font-size:1.9rem;font-weight:800;color:var(--p);border-bottom:3px solid var(--a);display:inline-block;padding:0 1rem;margin:.5rem 0}
+.cert-actions{margin-top:1.1rem;display:flex;gap:.6rem;justify-content:center}
+#toast{position:fixed;left:50%;bottom:1.2rem;transform:translateX(-50%) translateY(150%);background:var(--pd);color:#fff;padding:.6rem 1.2rem;border-radius:12px;font-weight:600;z-index:60;transition:transform .3s,opacity .3s;opacity:0;pointer-events:none;max-width:90vw}
+#toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:70;width:100%;height:100%}
+@media print{body{background:#fff}body.printing>*:not(#cert){display:none!important}body.printing #cert{position:static;background:#fff}body.printing .cert-actions{display:none}.cert-card{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+@media (max-width:620px){.hero{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="series">IELTS Writing Task 2</span><span class="ltitle">Introduction Builder</span></div>
+  <div class="tools">
+    <span class="pill" id="score">0 / 0</span>
+    <span class="pill ghost" id="goalpill">0 of 5 good intros</span>
+    <button class="tbtn" data-act="save">Save</button>
+    <button class="tbtn" data-act="load">Load</button>
+    <input type="file" id="file" accept=".json,application/json" hidden>
+  </div>
+</header>
+<nav id="rail" aria-label="Steps"></nav>
+<main id="main"></main>
+<footer>Designed by: Nazila Motahari</footer>
+<div id="cert" hidden></div>
+<div id="toast" role="status" aria-live="polite"></div>
+<canvas id="confetti" aria-hidden="true"></canvas>
+<script>
+const MOVES=[
+ {n:1,name:"General statement",ar:"جملة عامة",colour:"m1",help:"One sentence about the topic in general. Do not give your opinion yet, and do not copy the question.",frames:["Nowadays, …","In recent years, …","… is a topic that is often discussed today."]},
+ {n:2,name:"Paraphrase the prompt",ar:"إعادة صياغة السؤال",colour:"m2",help:"Say what the question says, in your own words, using the frame Some people say / believe that…",frames:["Some people believe that …","Some people say that …, while others argue that …","It is often claimed that …"]},
+ {n:3,name:"Your opinion",ar:"رأيك",colour:"m3",help:"Say clearly what you think. Completely agree, partly agree or disagree.",frames:["In my opinion, …","In my view, …","I strongly believe that …","I partly agree with this view, because …"]},
+ {n:4,name:"Closing sentence",ar:"الجملة الختامية",colour:"m4",help:"Tell the reader what the essay will do.",frames:["In this essay I will give reasons to support my opinion.","This essay will explain the reasons for my opinion.","In this essay I will discuss both sides and give my reasons."]}];
+
+const DEMO={q:"Some people think that all students should learn a second language at school. To what extent do you agree or disagree?",
+ s:[["Learning languages has become more important as countries trade and travel more than ever before.",1,"A general sentence about the topic. It does not mention the question or your opinion."],
+    ["Some people believe that every student should be taught a second language at school.",2,"The question, in new words: all students → every student; learn → be taught."],
+    ["In my opinion, a second language should be compulsory for all young learners.",3,"A clear opinion. The examiner now knows your position."],
+    ["In this essay I will give reasons to support my opinion.",4,"The closing sentence tells the reader what comes next."]]};
+
+const FIND=[
+ {q:"Traffic and road safety",
+  s:[["Cars have become part of daily life in almost every city in the world.",0],
+     ["Some people believe that the speed limit in cities should be lowered to 30 kilometres per hour.",1],
+     ["In my opinion, lower speed limits would save lives and should be introduced everywhere.",2],
+     ["In this essay I will give reasons to support my opinion.",3]]},
+ {q:"Exams at school",
+  s:[["Examinations have been used in schools for hundreds of years.",0],
+     ["It is often claimed that exams are the fairest way to measure what a student has learned.",1],
+     ["I partly agree with this view, because exams test memory rather than real skills.",2],
+     ["This essay will explain the reasons for my opinion.",3]]}];
+
+const ORDERS=[
+ {q:"Working hours",tiles:["Millions of people around the world now work more than forty hours a week.",
+   "Some people say that companies should offer a four-day working week.",
+   "In my opinion, a shorter week would make employees healthier and more productive.",
+   "In this essay I will give reasons to support my opinion."]},
+ {q:"Museums",tiles:["Museums hold the history of a country and attract visitors from all over the world.",
+   "Some people believe that entry to museums should be free for everybody.",
+   "In my view, free entry is the best way to make culture available to all.",
+   "This essay will explain the reasons for my opinion."]}];
+
+const PARA=[
+ {q:"Prompt: 'Children should start school at the age of four.'",
+  options:["Some people believe that young children ought to begin their education at the age of four.",
+   "Children should start school at the age of four, some people believe.",
+   "Some people believe that children should start school at the age of four.",
+   "Children at four years old are very small for school."],
+  a:0,why:"It keeps the meaning and changes the words: children → young children; start school → begin their education. The third option only adds a frame in front of the copied question."},
+ {q:"Prompt: 'Governments should spend more money on public health than on sport.'",
+  options:["It is often argued that public health deserves a larger share of government spending than sport does.",
+   "Governments should spend more money on public health than on sport, some people say.",
+   "Some people believe governments should spend more money on public health than on sport.",
+   "Sport is not important for governments at all."],
+  a:0,why:"New words, same meaning. The last option changes the meaning, which loses marks."},
+ {q:"Prompt: 'Employers should not ask about a candidate's age.'",
+  options:["Some people say that a person's age should play no part in the hiring process.",
+   "Some people say that employers should not ask about a candidate's age.",
+   "Employers must never ask questions in interviews.",
+   "Age is a number and people say many things about it."],
+  a:0,why:"'ask about a candidate's age' becomes 'age should play no part in the hiring process'."},
+ {q:"Which paraphrase of 'Tourists should pay a tax to visit historical sites' is best?",
+  options:["It is often claimed that visitors should be charged a fee to enter historical places.",
+   "Some people believe tourists should pay a tax to visit historical sites.",
+   "Tourists pay taxes in many countries around the world today.",
+   "Historical sites are very old and beautiful places."],
+  a:0,why:"tourists → visitors; pay a tax → be charged a fee; historical sites → historical places."},
+ {q:"Why is this a weak paraphrase? Prompt: 'Students learn better in small classes.' Paraphrase: 'Some people believe that students learn better in small classes.'",
+  options:["Every word of the question has been copied; only the frame is new.",
+   "It is too long for an introduction.",
+   "It gives an opinion too early.",
+   "It uses the wrong frame."],
+  a:0,why:"A frame in front of a copied sentence is still copying. Change the words inside: 'learners make more progress in smaller groups'."}];
+
+const FIX=[
+ {q:"What is missing from this introduction? 'Nowadays many people use cars every day. Some people say that city centres should be closed to private cars. In this essay I will give reasons to support my opinion.'",
+  options:["The opinion","The general statement","The paraphrase","The closing sentence"],
+  a:0,why:"Move 3 is missing. The reader does not know what the writer thinks. Add: 'In my opinion, …'."},
+ {q:"What is wrong with this introduction? 'Some people say that homework should be banned. In my opinion, homework is useful. In this essay I will give reasons to support my opinion.'",
+  options:["There is no general statement at the start","There is no opinion","There is no closing sentence","The paraphrase is missing"],
+  a:0,why:"It starts with the question. Begin with one general sentence: 'Homework has been part of school life for generations.'"},
+ {q:"What is wrong with this introduction? 'I think homework is bad. Homework should be banned. Homework takes a lot of time. Homework is not useful. In this essay I will talk about homework.'",
+  options:["The same word is repeated and there is no paraphrase of the question","It is too formal","It has too many linking words","The opinion is too clear"],
+  a:0,why:"Four short sentences about the same word, and the question is never paraphrased. Use the four moves, one sentence each."},
+ {q:"What is wrong with this introduction? 'Nowadays technology is everywhere. Some people believe that children under twelve should not own a smartphone. In this essay I will discuss the advantages and disadvantages of smartphones.'",
+  options:["The closing sentence promises a different essay from the question","The general statement is too short","The paraphrase copies the question","There is nothing wrong"],
+  a:0,why:"The question asks whether you agree, so the closing sentence must promise reasons for your opinion, not advantages and disadvantages."},
+ {q:"Which introduction is the strongest?",
+  options:["Air travel has grown quickly over the last fifty years. Some people believe that short flights should be replaced by trains. In my view, this change would cut pollution and should be encouraged. In this essay I will give reasons to support my opinion.",
+   "Some people believe that short flights should be replaced by trains, and in this essay I will give reasons.",
+   "Air travel is a big topic. Flights are bad. Trains are good. I will explain.",
+   "In my opinion short flights should be replaced by trains because pollution is a serious problem in many countries and the government must act now."],
+  a:0,why:"Only the first one has all four moves, each in one clear sentence."}];
+
+const PROMPTS=[
+ {t:"Education",q:"Some people think that students should study only the subjects they enjoy. To what extent do you agree or disagree?",
+  keys:["students","subjects","enjoy","study","school"],
+  syn:["students → learners / young people","study → take / choose","subjects they enjoy → the subjects that interest them"],
+  model:["Choosing what to study is one of the most important decisions young people make.",
+   "Some people believe that learners should take only the subjects that interest them.",
+   "In my opinion, students should choose most of their subjects, but a few core courses must stay compulsory.",
+   "In this essay I will give reasons to support my opinion."]},
+ {t:"Technology",q:"Social media does more harm than good to young people. To what extent do you agree or disagree?",
+  keys:["social","media","young","people","harm"],
+  syn:["social media → social networking sites","young people → teenagers","harm → damage / negative effects"],
+  model:["Social networking sites have become part of daily life for almost every teenager.",
+   "Some people say that these platforms damage young users more than they help them.",
+   "In my view, social media is harmful only when it is used without limits.",
+   "This essay will explain the reasons for my opinion."]},
+ {t:"Work",q:"Working from home is better than working in an office. To what extent do you agree or disagree?",
+  keys:["working","home","office","employees","work"],
+  syn:["working from home → remote work","office → workplace","better → more effective"],
+  model:["Since the pandemic, millions of employees have discovered that their job can be done from anywhere.",
+   "Some people believe that remote work is more effective than working in a traditional workplace.",
+   "I partly agree with this view, because working from home suits some jobs but not others.",
+   "In this essay I will give reasons to support my opinion."]},
+ {t:"Health",q:"Advertisements for fast food should be banned. To what extent do you agree or disagree?",
+  keys:["advertisements","fast","food","banned","advertising"],
+  syn:["advertisements → adverts / marketing","banned → prohibited / not allowed","fast food → unhealthy food"],
+  model:["Adverts for burgers, fried chicken and sweet drinks appear on every screen and street in the country.",
+   "Some people believe that marketing for unhealthy food should be prohibited completely.",
+   "In my opinion, such advertising should be banned during children's programmes but not at every hour.",
+   "In this essay I will give reasons to support my opinion."]},
+ {t:"Environment",q:"Only governments can protect the environment; individuals can do very little. To what extent do you agree or disagree?",
+  keys:["governments","environment","individuals","protect","people"],
+  syn:["governments → the authorities","individuals → ordinary people","protect → look after / preserve"],
+  model:["Climate change is now discussed in almost every country in the world.",
+   "Some people say that only the authorities can preserve the environment and that ordinary people have little power.",
+   "I strongly disagree with this view, because the daily choices of millions of people change the whole picture.",
+   "This essay will explain the reasons for my opinion."]},
+ {t:"City life",q:"Public transport should be free for everyone. To what extent do you agree or disagree?",
+  keys:["public","transport","free","everyone","buses"],
+  syn:["public transport → buses and trains","free → provided at no cost","everyone → all residents"],
+  model:["Every large city depends on buses, metros and trains to keep people moving.",
+   "Some people believe that these services should be provided at no cost to all residents.",
+   "In my opinion, free transport would reduce traffic and should be introduced in large cities.",
+   "In this essay I will give reasons to support my opinion."]},
+ {t:"School",q:"Secondary school students should be given less homework. To what extent do you agree or disagree?",
+  keys:["homework","students","school","less","teachers"],
+  syn:["homework → work at home / assignments","less → reduced","students → learners"],
+  model:["Homework has been part of school life for generations.",
+   "Some people say that the number of assignments given to teenagers should be reduced.",
+   "I partly agree, because the amount of homework matters less than its quality.",
+   "In this essay I will give reasons to support my opinion."]},
+ {t:"Work and money",q:"Salary is the most important factor when choosing a job. To what extent do you agree or disagree?",
+  keys:["salary","important","factor","choosing","job"],
+  syn:["salary → pay / income","the most important factor → the main consideration","job → career / position"],
+  model:["Choosing a career is a decision that shapes the rest of a person's life.",
+   "Some people believe that pay is the main consideration when a job is chosen.",
+   "In my view, salary matters, but job satisfaction is far more important in the long term.",
+   "This essay will explain the reasons for my opinion."]},
+ {t:"Tourism",q:"Tourism brings more benefits than problems to a country. To what extent do you agree or disagree?",
+  keys:["tourism","benefits","problems","country","tourists"],
+  syn:["tourism → the tourist industry","benefits → advantages","problems → difficulties / drawbacks"],
+  model:["The tourist industry has grown rapidly in the Gulf and in many other regions.",
+   "Some people say that tourism brings a country more advantages than drawbacks.",
+   "In my opinion, the benefits are greater, provided that visitor numbers are controlled.",
+   "In this essay I will give reasons to support my opinion."]},
+ {t:"Technology",q:"Online lessons will one day replace teachers in the classroom. To what extent do you agree or disagree?",
+  keys:["online","lessons","replace","teachers","classroom"],
+  syn:["online lessons → digital learning","replace → take the place of","teachers → classroom instructors"],
+  model:["Digital learning has spread into schools and universities all over the world.",
+   "It is often claimed that online courses will one day take the place of classroom teachers.",
+   "I strongly disagree with this idea, because a teacher does much more than deliver information.",
+   "In this essay I will give reasons to support my opinion."]},
+ {t:"Sport",q:"Professional athletes are paid far too much money. To what extent do you agree or disagree?",
+  keys:["athletes","paid","money","professional","salaries"],
+  syn:["professional athletes → top sportspeople","paid too much → earn excessive salaries","money → income"],
+  model:["The salaries of famous footballers are discussed in the news almost every week.",
+   "Some people believe that top sportspeople earn excessive amounts of money for their work.",
+   "I partly agree with this view, because their careers are short but their rewards are extreme.",
+   "This essay will explain the reasons for my opinion."]},
+ {t:"Family",q:"Young people should live with their parents until they finish university. To what extent do you agree or disagree?",
+  keys:["young","people","live","parents","university"],
+  syn:["young people → young adults","live with their parents → stay in the family home","until they finish → before completing"],
+  model:["In many cultures, young adults stay in the family home far longer than they once did.",
+   "Some people say that students should remain with their families until their degree is complete.",
+   "In my opinion, living at home during university has more advantages than disadvantages.",
+   "In this essay I will give reasons to support my opinion."]}];
+
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const STEPS=[["learn","The four moves","الأجزاء الأربعة","🧩"],["find","Find the moves","اكتشف الأجزاء","🔎"],["order","Put it in order","الترتيب","🔢"],["para","Paraphrase it","إعادة الصياغة","🔁"],["fix","Fix it","صحّح","🛠️"],["write","Write your own","اكتب بنفسك","✍️"],["mine","My introductions","مقدماتي","📚"]];
+const GOAL=5;
+/* patterns */
+const FRAME2=/\b(some (people|students|experts|teachers)|many people|it is (often |sometimes )?(said|believed|argued|claimed)|others (believe|argue|say|think))\b/i;
+const OPIN=/\b(in my (opinion|view)|i (strongly |completely |totally |partly |firmly )?(agree|disagree|believe|think|feel)|from my point of view|i am convinced|personally,)/i;
+const ESSAY=/\b(in this essay|this essay will|i will (give|discuss|explain|present)|the following essay)\b/i;
+const wc=t=>{t=(t||"").trim();return t?t.split(/\s+/).length:0;};
+const sentences=t=>(t||"").split(/(?<=[.!?])\s+/).map(x=>x.trim()).filter(x=>wc(x)>2);
+function copyRun(a,b){ // longest run of shared consecutive words
+  const A=(a||"").toLowerCase().replace(/[^a-z\s]/g," ").split(/\s+/).filter(Boolean);
+  const B=(b||"").toLowerCase().replace(/[^a-z\s]/g," ").split(/\s+/).filter(Boolean);
+  let best=0;const dp=Array(B.length+1).fill(0);
+  for(let i=1;i<=A.length;i++){let prev=0;
+    for(let j=1;j<=B.length;j++){const t=dp[j];dp[j]=A[i-1]===B[j-1]?prev+1:0;if(dp[j]>best)best=dp[j];prev=t;}}
+  return best;
+}
+/* items */
+const ITEMS={};
+FIND.forEach((f,i)=>ITEMS["f"+i]={type:"sort",q:"Which move is each sentence? Topic: "+f.q,buckets:MOVES.map(m=>m.n+". "+m.name),items:f.s.map(s=>({t:s[0],b:s[1]}))});
+ORDERS.forEach((o,i)=>ITEMS["o"+i]={type:"order",q:"Put this introduction in the right order. Topic: "+o.q,tiles:o.tiles,why:"General statement, paraphrase, opinion, closing sentence. Always this order."});
+PARA.forEach((p,i)=>ITEMS["a"+i]=Object.assign({type:"mc"},p));
+FIX.forEach((p,i)=>ITEMS["x"+i]=Object.assign({type:"mc"},p));
+const SCORED=Object.keys(ITEMS),MAX=SCORED.length*10;
+const GROUP={find:Object.keys(ITEMS).filter(k=>k[0]==="f"),order:Object.keys(ITEMS).filter(k=>k[0]==="o"),para:Object.keys(ITEMS).filter(k=>k[0]==="a"),fix:Object.keys(ITEMS).filter(k=>k[0]==="x")};
+/* state */
+function fresh(){return{v:1,step:"learn",done:{},res:{},mode:"guided",qi:0,boxes:["","","",""],free:"",checked:false,intros:[],name:"",seenModel:false};}
+let S=fresh(),cur="learn";
+const KEY="t2-intro-builder-v1";
+function shuf(n){const a=[...Array(n).keys()];for(let i=n-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+function st(k){if(!S.res[k]){const it=ITEMS[k],r={done:false,pts:0};
+  if(it.type==="mc"){r.perm=shuf(it.options.length);r.tried=[];}
+  if(it.type==="sort"){r.perm=shuf(it.items.length);r.placed={};r.bad=[];}
+  if(it.type==="order"){let p;do{p=shuf(it.tiles.length);}while(p.every((v,i)=>v===i));r.perm=p;r.ans=[];r.wrong=false;r.checks=0;}
+  S.res[k]=r;}return S.res[k];}
+const score=()=>SCORED.reduce((t,k)=>t+(S.res[k]&&S.res[k].done?S.res[k].pts:0),0);
+const pct=()=>Math.round(100*score()/MAX);
+const goodCount=()=>S.intros.filter(i=>i.good).length;
+/* intro checking */
+function checkGuided(b,p){
+  const all=b.join(" ").trim(), run=copyRun(all,p.q);
+  const C=[];
+  C.push({ok:wc(b[0])>=8&&!FRAME2.test(b[0])&&!OPIN.test(b[0])&&!ESSAY.test(b[0]),t:"Move 1: a general statement",
+    no:wc(b[0])<8?"Too short. Write one full sentence about the topic in general.":"Move 1 must not give your opinion or repeat the question. Write about the topic in general."});
+  C.push({ok:FRAME2.test(b[1])&&wc(b[1])>=8&&copyRun(b[1],p.q)<7,t:"Move 2: the prompt in your own words",
+    no:!FRAME2.test(b[1])?"Use the frame: Some people believe / say that…":copyRun(b[1],p.q)>=7?"This copies the question. Change the words inside the frame.":"Too short for a paraphrase."});
+  C.push({ok:OPIN.test(b[2])&&wc(b[2])>=6,t:"Move 3: your opinion",no:"Say what you think: In my opinion, … / I strongly believe that …"});
+  C.push({ok:ESSAY.test(b[3]),t:"Move 4: the closing sentence",no:"Finish with: In this essay I will give reasons to support my opinion."});
+  C.push({ok:wc(all)>=40&&wc(all)<=85,t:"Length: "+wc(all)+" words",no:wc(all)<40?"An introduction is usually 40 to 70 words. Add more detail.":"Too long. An introduction should stay under about 70 words."});
+  C.push({ok:run<7,t:"Your own words",no:"A run of "+run+" words is copied straight from the question. Paraphrase it."});
+  return C;
+}
+function checkFree(t,p){
+  const s=sentences(t),first=s[0]||"",last=s[s.length-1]||"",run=copyRun(t,p.q);
+  const iP=s.findIndex(x=>FRAME2.test(x)),iO=s.findIndex(x=>OPIN.test(x)),iE=s.findIndex(x=>ESSAY.test(x));
+  const C=[];
+  C.push({ok:!!first&&!FRAME2.test(first)&&!OPIN.test(first)&&!ESSAY.test(first)&&wc(first)>=8,t:"Move 1: starts with a general statement",no:"Begin with one general sentence about the topic, not with the question or your opinion."});
+  C.push({ok:iP>0,t:"Move 2: the prompt in your own words",no:"After the general statement, paraphrase the question: Some people believe that…"});
+  C.push({ok:iO>-1&&iO>iP,t:"Move 3: your opinion, after the paraphrase",no:"Give your opinion after the paraphrase: In my opinion, …"});
+  C.push({ok:iE>-1&&iE===s.length-1,t:"Move 4: a closing sentence at the end",no:"End with: In this essay I will give reasons to support my opinion."});
+  C.push({ok:wc(t)>=40&&wc(t)<=85,t:"Length: "+wc(t)+" words",no:wc(t)<40?"An introduction is usually 40 to 70 words.":"Too long. Keep the introduction under about 70 words."});
+  C.push({ok:run<7,t:"Your own words",no:"A run of "+run+" words is copied straight from the question. Paraphrase it."});
+  return C;
+}
+function currentText(){return S.mode==="guided"?S.boxes.join(" ").replace(/\s+/g," ").trim():S.free.trim();}
+function currentChecks(){const p=PROMPTS[S.qi];return S.mode==="guided"?checkGuided(S.boxes,p):checkFree(S.free,p);}
+/* chrome */
+function renderTop(){
+  $("#score").textContent="⭐ "+score()+" / "+MAX;
+  $("#goalpill").textContent=goodCount()+" of "+GOAL+" good intros";
+}
+function renderRail(){
+  $("#rail").innerHTML=STEPS.map(([id,en,ar],i)=>`<button class="rs ${id===cur?"on":""} ${S.done[id]?"ok":""}" data-act="go" data-s="${id}"><span class="n">${S.done[id]?"✓":i+1}</span><span class="t">${en}<small>${ar}</small></span></button>`).join("");
+}
+function nav(){
+  const i=STEPS.findIndex(s=>s[0]===cur);
+  const p=i>0?`<button class="btn ghost" data-act="go" data-s="${STEPS[i-1][0]}">Back</button>`:"<span></span>";
+  const n=STEPS[i+1]?`<button class="btn" data-act="go" data-s="${STEPS[i+1][0]}">Next: ${STEPS[i+1][1]}</button>`:"";
+  return `<div class="navrow">${p}${n}</div>`;
+}
+function go(id){cur=id;S.step=id;render();window.scrollTo({top:0,behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});}
+function checkDone(){
+  ["find","order","para","fix"].forEach(g=>{if(!S.done[g]&&GROUP[g].every(k=>S.res[k]&&S.res[k].done)){S.done[g]=true;toast("🏅 Step complete: "+STEPS.find(s=>s[0]===g)[1]);confetti(70);}});
+  if(!S.done.learn&&cur==="learn")S.done.learn=true;
+  if(!S.done.write&&goodCount()>=GOAL){S.done.write=true;toast("🎉 "+GOAL+" good introductions written!");confetti(160);}
+  renderTop();renderRail();save();
+}
+function render(){
+  renderTop();renderRail();
+  const f={learn:pLearn,find:pItems,order:pItems,para:pItems,fix:pItems,write:pWrite,mine:pMine}[cur];
+  $("#main").innerHTML=f()+nav();
+  if(cur==="write")updBoxes();
+}
+/* steps */
+function pLearn(){
+  S.done.learn=true;
+  return `<section class="hero"><div class="mark">🧩</div><div><h1>Build your introduction in four moves</h1>
+  <p>The same four sentences work for every agree or disagree question.</p><p class="ar">أربع جمل تصلح لأي سؤال من نوع الاتفاق أو الاختلاف.</p></div></section>
+  <section class="card"><h2>The four moves</h2>
+  <div class="moves">${MOVES.map(m=>`<div class="move m${m.n}"><div class="lab">${m.n}. ${esc(m.name)} <span class="ar" style="display:inline;margin:0 .5rem">${esc(m.ar)}</span></div>
+   <div>${esc(m.help)}</div><div class="frames">${m.frames.map(f=>"<b>"+esc(f)+"</b>").join(" &nbsp;·&nbsp; ")}</div></div>`).join("")}</div></section>
+  <section class="card"><h2>One introduction, move by move</h2>
+  <div class="qbox"><div class="h">Question</div><p>${esc(DEMO.q)}</p></div>
+  <div class="demo">${DEMO.s.map(([t,n,note])=>`<div class="dline"><div class="chipn m${n}">${n}</div><div><div class="txt">${esc(t)}</div><div class="note">${esc(note)}</div></div></div>`).join("")}</div>
+  <div class="fb ok"><b>Four sentences, 40 to 70 words.</b> Never copy the question, and never start with your opinion.</div>
+  <div class="row"><button class="btn go" data-act="go" data-s="find">Start practising</button></div></section>`;
+}
+function pItems(){
+  const head={find:["Find the moves","Read each sentence and decide which move it is. Tap the sentence, then tap its box.","اقرأ كل جملة وحدّد أي جزء هي. اضغط الجملة ثم اضغط الصندوق المناسب."],
+   order:["Put it in order","The four sentences are mixed. Put them back in the right order.","الجمل مختلطة. أعد ترتيبها."],
+   para:["Paraphrase it","Move 2 must say the question in new words. Choose the best version.","الجزء الثاني يعيد صياغة السؤال بكلمات جديدة. اختر أفضل صياغة."],
+   fix:["Fix it","Each introduction below has one problem. Find it.","كل مقدمة أدناه فيها مشكلة واحدة. اكتشفها."]}[cur];
+  return `<section class="card"><h2>${head[0]}</h2><p>${head[1]}</p><p class="ar">${head[2]}</p></section>`+
+   GROUP[cur].map((k,i)=>`<div id="it-${k}">${itemHTML(k,i+1)}</div>`).join("");
+}
+function itemHTML(k,n){
+  const it=ITEMS[k],r=st(k);
+  let h=`<div class="item ${r.done?"done":""}"><div class="qnum">${n}</div><div>`;
+  if(it.type==="mc"){
+    h+=`<p class="q">${esc(it.q)}</p><div class="opts">`+
+      r.perm.map(o=>{const cls=(r.done&&o===it.a)?"right":(r.tried.includes(o)&&o!==it.a)?"wrong":"";
+        return `<button class="opt ${cls}" data-act="mc" data-k="${k}" data-o="${o}" ${r.done||r.tried.includes(o)?"disabled":""}>${esc(it.options[o])}</button>`;}).join("")+`</div>`;
+    if(r.done)h+=`<div class="fb ok"><b>${r.pts?"Correct! +10":"Correct."}</b> ${esc(it.why||"")}</div>`;
+    else if(r.tried.length)h+=`<div class="fb no"><b>Not quite.</b> Try again.</div>`;
+  }
+  if(it.type==="sort"){
+    const left=r.perm.filter(i=>r.placed[i]===undefined);
+    h+=`<p class="q">${esc(it.q)}</p><p class="hint">Tap a sentence, then tap the move it belongs to.</p>
+    <div class="bank">${left.map(i=>`<button class="tile ${r.sel===i?"sel":""}" data-act="spick" data-k="${k}" data-i="${i}">${esc(it.items[i].t)}</button>`).join("")}</div>
+    <div class="buckets">${it.buckets.map((b,bi)=>`<button class="bucket" data-act="sdrop" data-k="${k}" data-b="${bi}"><b>${esc(b)}</b>${Object.keys(r.placed).filter(i=>r.placed[i]===bi).map(i=>`<span class="placed">${esc(it.items[i].t)}</span>`).join("")}</button>`).join("")}</div>`;
+    if(r.done)h+=`<div class="fb ok"><b>Done! +${r.pts}</b> ${r.bad.length?"You placed "+r.bad.length+" in the wrong box first.":"Perfect first time."}</div>`;
+  }
+  if(it.type==="order"){
+    const rest=r.perm.filter(i=>!r.ans.includes(i));
+    h+=`<p class="q">${esc(it.q)}</p>
+    <div class="line">${r.ans.map(i=>`<button class="tile" data-act="oback" data-k="${k}" data-i="${i}" ${r.done?"disabled":""}>${esc(it.tiles[i])}</button>`).join("")}</div>
+    <div class="bank">${rest.map(i=>`<button class="tile" data-act="oadd" data-k="${k}" data-i="${i}">${esc(it.tiles[i])}</button>`).join("")}</div>`;
+    if(!r.done){h+=`<div class="row"><button class="btn" data-act="ocheck" data-k="${k}" ${r.ans.length<it.tiles.length?"disabled":""}>Check</button>${r.wrong?`<button class="btn ghost" data-act="oshow" data-k="${k}">Show answer</button>`:""}</div>`;
+      if(r.wrong)h+=`<div class="fb no"><b>Not quite.</b> Tap a sentence in the box above to take it back, then try again.</div>`;}
+    else h+=`<div class="fb ok"><b>${r.pts?"Correct! +10":"Here is the order."}</b> ${esc(it.why||"")}</div>`;
+  }
+  return h+`</div></div>`;
+}
+function pWrite(){
+  const p=PROMPTS[S.qi],C=S.checked?currentChecks():null;
+  const dots=Array.from({length:GOAL},(_,i)=>`<div class="dot ${i<goodCount()?"on":""}">${i<goodCount()?"✓":i+1}</div>`).join("");
+  return `<section class="card"><h2>Write your own introduction</h2>
+  <div class="goal">${dots}<span class="small" style="align-self:center">Goal: ${GOAL} good introductions</span></div>
+  <div class="qbox"><div class="h">Question ${S.qi+1} of ${PROMPTS.length} · ${esc(p.t)}</div><p>${esc(p.q)}</p></div>
+  <div class="row"><button class="btn ghost" data-act="next">Different question</button>
+   <button class="btn ghost" data-act="hints">${S.hints?"Hide":"Show"} paraphrase ideas</button></div>
+  ${S.hints?`<div class="fb ok"><b>Ideas for move 2:</b> ${p.syn.map(esc).join(" &nbsp;·&nbsp; ")}</div>`:""}
+  <div class="modebar"><button class="mbtn ${S.mode==="guided"?"on":""}" data-act="mode" data-m="guided">Guided: four boxes</button>
+   <button class="mbtn ${S.mode==="free"?"on":""}" data-act="mode" data-m="free">Exam mode: one box</button></div>
+  ${S.mode==="guided"
+   ? `<div class="boxes">${MOVES.map((m,i)=>`<div class="box b${m.n}" id="bx${i}"><div class="lab"><span>${m.n}. ${esc(m.name)}</span><span class="state" id="stt${i}"></span></div>
+      <textarea data-b="${i}" rows="2" placeholder="${esc(m.frames[0])}">${esc(S.boxes[i])}</textarea>
+      <div class="tip">${esc(m.help)}</div></div>`).join("")}</div>`
+   : `<textarea id="free" placeholder="Write the whole introduction here: general statement, paraphrase, opinion, closing sentence.">${esc(S.free)}</textarea>`}
+  <div class="row"><span class="small" id="wcount"></span></div>
+  <div class="row"><button class="btn go" data-act="checkintro">Check my introduction</button>
+   <button class="btn ghost" data-act="modelintro">${S.seenModel?"Hide":"Show"} a model introduction</button>
+   <button class="btn ghost" data-act="clear">Clear</button></div>
+  ${C?`<div class="report">${C.map(c=>`<div class="chk ${c.ok?"pass":"fail"}"><div class="ic">${c.ok?"✓":"✗"}</div><div><b>${esc(c.t)}</b>${c.ok?"":"<br><span class='small'>"+esc(c.no)+"</span>"}</div></div>`).join("")}</div>
+   <div class="preview"><b>Your introduction</b><br>${esc(currentText())}</div>
+   <div class="row">${C.every(c=>c.ok)?`<button class="btn go" data-act="keep">Save it and take a new question</button>`:`<button class="btn" data-act="keep">Save this attempt anyway</button>`}</div>`:""}
+  ${S.seenModel?`<div class="preview"><b>Model introduction</b><br>${p.model.map((s,i)=>`<span class="small" style="color:var(--c${i+1});font-weight:700">${i+1}.</span> ${esc(s)}`).join(" ")}</div>`:""}
+  </section>`;
+}
+function updBoxes(){
+  const C=currentChecks();
+  $("#wcount").textContent=wc(currentText())+" words (aim for 40 to 70)";
+  if(S.mode!=="guided")return;
+  for(let i=0;i<4;i++){
+    const box=$("#bx"+i),stt=$("#stt"+i);if(!box)continue;
+    const filled=wc(S.boxes[i])>0,ok=C[i].ok;
+    box.classList.toggle("good",ok);
+    stt.className="state "+(ok?"ok":"no");
+    stt.textContent=!filled?"":(ok?"✓ looks right":"check this");
+  }
+}
+function pMine(){
+  const good=goodCount(),ready=good>=GOAL&&pct()>=80;
+  return `<section class="card"><h2>My introductions</h2>
+  <div class="bigscore"><span>${good}</span><div><b>good introductions saved</b><br><span class="small">Activities: ${score()} of ${MAX} points (${pct()}%)</span></div></div>
+  <div class="goal">${Array.from({length:GOAL},(_,i)=>`<div class="dot ${i<good?"on":""}">${i<good?"✓":i+1}</div>`).join("")}</div>
+  ${ready?`<div class="fb ok"><b>Well done.</b> You have written ${GOAL} good introductions and finished the activities.</div>
+    <div class="row"><label>Your name <input id="nm" value="${esc(S.name)}" style="border:2px solid #cfd8d8;border-radius:10px;padding:.35rem .6rem"></label><button class="btn" data-act="cert">Create certificate</button></div>`
+   :`<div class="fb no">To earn the certificate: write ${GOAL} good introductions (${good} so far) and score at least 80% in the activities (${pct()}% so far).</div>`}
+  <div class="row"><button class="btn ghost" data-act="download" ${S.intros.length?"":"disabled"}>Download my introductions</button>
+   <button class="btn ghost" data-act="save">Save progress file</button>
+   <button class="btn ghost" data-act="clearall" ${S.intros.length?"":"disabled"}>Delete my introductions</button></div></section>
+  ${S.intros.length?S.intros.slice().reverse().map(it=>`<div class="saved"><div class="h"><span>${esc(it.topic)} · ${esc(it.date)}</span><span class="score">${it.pass}/6 ${it.good?"✓":""}</span></div>
+    <p class="small">${esc(it.q)}</p><p>${esc(it.text)}</p></div>`).join("")
+   :`<section class="card"><p>Nothing saved yet. Go to <b>Write your own</b> and check an introduction.</p></section>`}`;
+}
+/* events */
+function reItem(k){const el=$("#it-"+k);if(el){const n=el.querySelector(".qnum").textContent;el.innerHTML=itemHTML(k,n);}checkDone();}
+function flashEl(sel){const e=$(sel);if(e){e.classList.add("flashbad");setTimeout(()=>e.classList.remove("flashbad"),450);}}
+document.addEventListener("click",e=>{
+  const b=e.target.closest("[data-act]");if(!b)return;
+  const a=b.dataset.act,k=b.dataset.k;
+  if(a==="go")return go(b.dataset.s);
+  if(a==="mc"){const r=st(k),o=+b.dataset.o;if(r.done)return;r.tried.push(o);
+    if(o===ITEMS[k].a){r.done=true;r.pts=r.tried.length===1?10:0;if(r.pts)confetti(25);}reItem(k);return;}
+  if(a==="spick"){st(k).sel=+b.dataset.i;reItem(k);return;}
+  if(a==="sdrop"){const r=st(k),it=ITEMS[k],bi=+b.dataset.b;if(r.sel==null||r.done)return;
+    if(it.items[r.sel].b===bi){r.placed[r.sel]=bi;r.sel=null;
+      if(Object.keys(r.placed).length===it.items.length){r.done=true;r.pts=Math.round(10*(it.items.length-r.bad.length)/it.items.length);confetti(40);}
+      reItem(k);}
+    else{if(!r.bad.includes(r.sel))r.bad.push(r.sel);flashEl(`#it-${k} .bucket[data-b="${bi}"]`);}
+    return;}
+  if(a==="oadd"){const r=st(k);if(r.done)return;r.ans.push(+b.dataset.i);r.wrong=false;reItem(k);return;}
+  if(a==="oback"){const r=st(k);if(r.done)return;r.ans=r.ans.filter(x=>x!==+b.dataset.i);reItem(k);return;}
+  if(a==="ocheck"){const r=st(k),it=ITEMS[k];r.checks++;
+    if(r.ans.map(i=>it.tiles[i]).join(" ")===it.tiles.join(" ")){r.done=true;r.pts=r.checks===1?10:0;if(r.pts)confetti(25);}else r.wrong=true;
+    reItem(k);return;}
+  if(a==="oshow"){const r=st(k);r.ans=ITEMS[k].tiles.map((_,i)=>i);r.done=true;r.pts=0;reItem(k);return;}
+  if(a==="mode"){S.mode=b.dataset.m;S.checked=false;render();return;}
+  if(a==="next"){S.qi=(S.qi+1)%PROMPTS.length;S.boxes=["","","",""];S.free="";S.checked=false;S.seenModel=false;S.hints=false;render();return;}
+  if(a==="hints"){S.hints=!S.hints;render();return;}
+  if(a==="clear"){S.boxes=["","","",""];S.free="";S.checked=false;render();return;}
+  if(a==="checkintro"){
+    if(wc(currentText())<10){toast("Write your introduction first.");return;}
+    S.checked=true;render();
+    const C=currentChecks();if(C.every(c=>c.ok))confetti(90);
+    return;}
+  if(a==="modelintro"){S.seenModel=!S.seenModel;render();return;}
+  if(a==="keep"){
+    const C=currentChecks(),pass=C.filter(c=>c.ok).length,p=PROMPTS[S.qi];
+    S.intros.push({topic:p.t,q:p.q,text:currentText(),pass,good:pass===C.length,date:new Date().toLocaleDateString("en-GB")});
+    toast(pass===C.length?"Saved. That one counts towards your goal.":"Saved. Fix the red points to make it count.");
+    S.qi=(S.qi+1)%PROMPTS.length;S.boxes=["","","",""];S.free="";S.checked=false;S.seenModel=false;S.hints=false;
+    checkDone();render();return;}
+  if(a==="cert")return cert();
+  if(a==="print"){document.body.classList.add("printing");window.print();setTimeout(()=>document.body.classList.remove("printing"),500);return;}
+  if(a==="closecert"){$("#cert").hidden=true;return;}
+  if(a==="download")return download();
+  if(a==="save")return saveFile();
+  if(a==="load")return $("#file").click();
+  if(a==="clearall"){if(confirm("Delete all saved introductions? Download them first if you want to keep them."))
+    {S.intros=[];S.done.write=false;render();toast("Saved introductions deleted.");}return;}
+});
+document.addEventListener("input",e=>{
+  const t=e.target;
+  if(t.dataset.b!==undefined){S.boxes[+t.dataset.b]=t.value;updBoxes();save();return;}
+  if(t.id==="free"){S.free=t.value;updBoxes();save();return;}
+  if(t.id==="nm"){S.name=t.value;save();return;}
+});
+/* files */
+function dl(name,text,type){const b=new Blob([text],{type:type||"text/plain;charset=utf-8"});const a=document.createElement("a");
+  a.href=URL.createObjectURL(b);a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),1000);}
+function download(){
+  const L=["IELTS Writing Task 2 — my introductions","Name: "+(S.name||"____________"),"Date: "+new Date().toLocaleDateString("en-GB"),""];
+  S.intros.forEach((it,i)=>{L.push((i+1)+". "+it.topic+"  ["+it.pass+"/6"+(it.good?" ✓":"")+"]","Question: "+it.q,it.text,"");});
+  dl("My-Task2-introductions.txt",L.join("\n"));toast("Downloaded. You can hand this file to your teacher.");
+}
+function saveFile(){dl("Intro-Builder-progress.json",JSON.stringify(S,null,1),"application/json");toast("Progress saved to your downloads.");}
+$("#file").addEventListener("change",e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();
+  r.onload=()=>{try{const o=JSON.parse(r.result);if(!o||!("intros" in o))throw 0;S=Object.assign(fresh(),o);cur=S.step||"learn";render();toast("Progress loaded.");}
+  catch(err){alert("This file could not be read. Choose a progress file saved from this app.");}};
+  r.readAsText(f);e.target.value="";});
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
+function load(){try{const s=localStorage.getItem(KEY);if(!s)return false;const o=JSON.parse(s);if(!o||!("intros" in o))return false;
+  S=Object.assign(fresh(),o);cur=S.step||"learn";return true;}catch(e){return false;}}
+/* certificate */
+function cert(){
+  const nm=($("#nm")&&$("#nm").value.trim())||"";
+  if(!nm){toast("Type your name first.");$("#nm")&&$("#nm").focus();return;}
+  S.name=nm;const d=new Date().toLocaleDateString("en-GB",{day:"numeric",month:"long",year:"numeric"});
+  $("#cert").innerHTML=`<div class="cert-card" role="dialog" aria-label="Certificate"><div style="font-size:2.8rem">🏆</div>
+   <h2>Certificate of Achievement</h2><p>This certifies that</p><div class="who">${esc(nm)}</div>
+   <p>has completed<br><b>IELTS Writing Task 2: Introduction Builder</b><br>${goodCount()} strong introductions written · Activities: ${pct()}%</p>
+   <p>Date: ${d}</p><p class="small">Designed by: Nazila Motahari</p>
+   <div class="cert-actions"><button class="btn" data-act="print">Print</button><button class="btn ghost" data-act="closecert">Close</button></div></div>`;
+  $("#cert").hidden=false;confetti(200);
+}
+/* toast + confetti */
+let tt;function toast(m){const t=$("#toast");t.textContent=m;t.classList.add("show");clearTimeout(tt);tt=setTimeout(()=>t.classList.remove("show"),3000);}
+const cv=$("#confetti"),cx=cv.getContext("2d");let parts=[],running=false;
+function confetti(n){if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+  cv.width=innerWidth;cv.height=innerHeight;
+  const cs=getComputedStyle(document.documentElement),cols=[cs.getPropertyValue("--p"),cs.getPropertyValue("--a"),"#a3246b","#3b4a9f","#ffffff"];
+  for(let i=0;i<n;i++)parts.push({x:innerWidth/2+(Math.random()-.5)*200,y:innerHeight*.35,vx:(Math.random()-.5)*14,vy:-Math.random()*12-4,s:Math.random()*7+4,r:Math.random()*6,c:cols[i%cols.length].trim(),l:120});
+  if(!running){running=true;requestAnimationFrame(tick);}}
+function tick(){cx.clearRect(0,0,cv.width,cv.height);
+  parts.forEach(p=>{p.vy+=.35;p.x+=p.vx;p.y+=p.vy;p.r+=.1;p.l--;cx.save();cx.translate(p.x,p.y);cx.rotate(p.r);cx.fillStyle=p.c;cx.fillRect(-p.s/2,-p.s/4,p.s,p.s/2);cx.restore();});
+  parts=parts.filter(p=>p.l>0&&p.y<cv.height+20);
+  if(parts.length)requestAnimationFrame(tick);else{running=false;cx.clearRect(0,0,cv.width,cv.height);}}
+if(load()){render();setTimeout(()=>toast("Welcome back. Your work was restored."),400);}else render();
+</script></body></html>
